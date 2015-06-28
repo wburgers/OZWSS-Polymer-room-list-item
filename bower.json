@@ -1,0 +1,22 @@
+{
+  "name": "OZWSS-Polymer-room-list-item",
+  "version": "0.0.1",
+  "homepage": "https://github.com/wburgers/OZWSS-Polymer-room-list-item",
+  "description": "room-list-item element for the OZWSS Polymer client",
+  "main": "OZWSS-Polymer-room-list-item.html",
+  "authors": [
+    "Willem Burgers"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components"
+  ],
+  "dependencies": {
+    "polymer": "Polymer/polymer#~1.0.0"
+  },
+  "devDependencies": {
+    "iron-component-page": "PolymerElements/iron-component-page#^1.0.0"
+  }
+}

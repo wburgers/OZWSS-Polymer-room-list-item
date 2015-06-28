@@ -1,0 +1,67 @@
+<link rel="import" href="../polymer/polymer.html">
+<link rel="import" href="../paper-material/paper-material.html">
+<link rel="import" href="../iron-flex-layout/iron-flex-layout.html">
+
+<!--
+@element OZWSS-Polymer-room-list-item
+@demo demo/index.html
+-->
+
+<dom-module id="OZWSS-Polymer-room-list-item">
+	<style>
+		paper-material {
+			border-radius: 2px;
+			margin: 16px auto;
+			background: white;
+			padding: 20px;
+			width: 245px;
+			margin: 10px;
+		}
+		.temps {
+			@apply(--layout-horizontal);
+		}
+		.room-list-item-header {
+			
+		}
+		span {
+			@apply(--layout-inline);
+		}
+		.temp-names {
+			@apply(--layout-vertical);
+			margin: 15px;
+		}
+		.temp-values {
+			@apply(--layout-vertical);
+			margin: 15px;
+		}
+	</style>
+	<template>
+		<paper-material>
+			<div class="room-list-item-header">
+				<h3>{{room.Name}}</h3>
+			</div>
+			<div class="temps">
+				<div class="temp-names">
+					<span>current temperature</span>
+					<span>current setpoint</span>
+				</div>
+				<div class="temp-values">
+					<span>{{room.currentTemp}}</span>
+					<span>{{room.currentSetpoint}}</span>
+				</div>
+			</div>
+		</paper-material>
+	</template>
+</dom-module>
+
+<script>
+	Polymer({
+		is: "OZWSS-Polymer-room-list-item",
+		properties: {
+			room: {
+				type: Object,
+				value: function() { return {}; },
+			},
+		},
+	});
+</script>
