@@ -21,9 +21,6 @@
 		.temps {
 			@apply(--layout-horizontal);
 		}
-		.room-list-item-header {
-			
-		}
 		span {
 			@apply(--layout-inline);
 		}
@@ -37,7 +34,7 @@
 		}
 	</style>
 	<template>
-		<paper-material>
+		<paper-material on-click="_roomClick">
 			<paper-ripple fit></paper-ripple>
 			<div class="room-list-item-header">
 				<h3>{{room.Name}}</h3>
@@ -64,6 +61,10 @@
 				type: Object,
 				value: function() { return {}; },
 			},
+		},
+		_roomClick: function(event, detail, sender) {
+			var roomName = this.$.room.Name;
+			this.fire('change-view',{view:10,roomName:roomName});
 		},
 	});
 </script>
