@@ -61,7 +61,7 @@
 				value: function() { return {}; },
 			},
 		},
-		_roomClick: function(event, detail, sender) {
+		_roomClick: function() {
 			var roomName = this.room.Name;
 			this.fire('change-view',{view:"single_room",roomName:roomName});
 		},
