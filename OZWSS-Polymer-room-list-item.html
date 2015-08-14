@@ -9,30 +9,31 @@
 -->
 
 <dom-module id="OZWSS-Polymer-room-list-item">
-	<style>
-		paper-material {
-			border-radius: 2px;
-			margin: 16px;
-			background: white;
-			padding: 20px;
-			width: 245px;
-		}
-		.temps {
-			@apply(--layout-horizontal);
-		}
-		span {
-			@apply(--layout-inline);
-		}
-		.temp-names {
-			@apply(--layout-vertical);
-			margin: 15px;
-		}
-		.temp-values {
-			@apply(--layout-vertical);
-			margin: 15px;
-		}
-	</style>
 	<template>
+		<style>
+			paper-material {
+				border-radius: 2px;
+				margin: 16px;
+				background: white;
+				padding: 20px;
+				width: 245px;
+			}
+			.temps {
+				@apply(--layout-horizontal);
+			}
+			span {
+				@apply(--layout-inline);
+			}
+			.temp-names {
+				@apply(--layout-vertical);
+				margin: 15px;
+			}
+			.temp-values {
+				@apply(--layout-vertical);
+				margin: 15px;
+			}
+		</style>
+
 		<paper-material on-click="_roomClick">
 			<paper-ripple fit></paper-ripple>
 			<div class="room-list-item-header">
